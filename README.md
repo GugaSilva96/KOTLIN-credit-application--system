@@ -54,7 +54,7 @@ KOTLIN, a linguagem de programação moderna e concisa, mostrou-se uma escolha b
 Abaixo, apresentamos um exemplo simples de como utilizar a API para cadastrar um cliente:
 
 ```json
-POST /api/customer/register
+
 
 {
   "firstName": "John",
@@ -66,6 +66,8 @@ POST /api/customer/register
   "zipCode": "12345-678",
   "street": "Main Street"
 }
+```
+
 
 ## Conclusão
 A combinação de Java e Kotlin, duas linguagens de programação versáteis, proporcionou uma base sólida para nossa aplicação. Utilizando o framework Spring Boot, conseguimos acelerar o desenvolvimento, criando uma API RESTful estruturada. O gerenciamento de dependências e automação de construção foram tratados com o Gradle, enquanto o H2 e o Flyway foram essenciais para garantir a persistência eficiente dos dados. Vamos explorar como essas tecnologias se entrelaçaram para criar uma solução poderosa e dinâmica.
