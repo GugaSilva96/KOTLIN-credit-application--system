@@ -8,8 +8,8 @@ import java.util.UUID
 
 @Repository
 interface CreditRepository: JpaRepository<Credit, Long> {
-    fun findByCreditCode(creditCode: org.hibernate.validator.constraints.UUID) : Credit?
+    fun findByCreditCode(creditCode: UUID) : Credit?
 
-    @Query(value = "SELECT * CREDIT WHERE CUSTOMER_ID = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM CREDITO WHERE CUSTOMER_ID = ?1", nativeQuery = true)
     fun findAllByCustomerId(customerId: Long): List<Credit>
 }

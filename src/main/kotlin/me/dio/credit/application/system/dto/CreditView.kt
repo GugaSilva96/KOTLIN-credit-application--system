@@ -2,6 +2,7 @@ package me.dio.credit.application.system.dto
 
 import jdk.jshell.Snippet.Status
 import me.dio.credit.application.system.entity.Credit
+import org.hibernate.validator.constraints.UUID
 import java.math.BigDecimal
 
 data class CreditView (
