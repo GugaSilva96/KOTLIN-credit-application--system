@@ -1,6 +1,7 @@
 package me.dio.credit.application.system.service.impl
 
 import me.dio.credit.application.system.entity.Credit
+import me.dio.credit.application.system.exception.BusinessException
 import me.dio.credit.application.system.repository.CreditRepository
 import me.dio.credit.application.system.service.ICreditService
 import org.hibernate.validator.constraints.UUID
@@ -25,7 +26,7 @@ class CreditService(
 
     override fun findByCreditCode(customerId: Long, creditCode: java.util.UUID): Credit {
         val credit: Credit = (this.creditRepository.findByCreditCode(creditCode)
-            ?: throw RuntimeException("Credit code $creditCode not found!"))
-        return if(credit.customer?.id == customerId) credit else throw RuntimeException("Contact ADMIN")
+            ?: throw BusinessException("Credit code $creditCode not found!"))
+        return if(credit.customer?.id == customerId) credit else throw IllegalArgumentException("Contact ADMIN")
     }
 }
