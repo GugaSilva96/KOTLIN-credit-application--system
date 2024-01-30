@@ -18,7 +18,7 @@ data class CustomerDto (
     @field:NotEmpty(message = "Ensure the string field is not blank.") val email: String,
     @field:NotEmpty(message = "Ensure the string field is not blank.") val password: String,
     @field:NotEmpty(message = "Ensure the string field is not blank.") val zipCode: String,
-    @field:NotEmpty(message = "Ensure the string field is not blank.") val street: String
+    @field:NotEmpty(message = "Ensure the string field is not blank.") val street: String,
 ) {
     fun toEntity(): Customer = Customer(
         firstName = this.firstName,
@@ -30,6 +30,6 @@ data class CustomerDto (
         address = Address(
             zipCode = this.zipCode,
             street = this.street
-            )
+            ),
     )
 }
